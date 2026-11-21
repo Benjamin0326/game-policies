@@ -26,11 +26,12 @@
     <p>Tower Oops (<span lang="ko">탑오정</span>) stores progress, companion information, the player display name, play records and settings on your device so you can resume play. The app has no account or sign-in feature, no developer-operated server and no built-in cloud sync.</p>
 
     <h2>Android backup and local data deletion</h2>
-    <p>Clearing the app's storage in Android settings or uninstalling the app generally removes app data stored on that device. Depending on the app's backup configuration, device settings and Android version, the system may automatically back up eligible app data or transfer it between devices. If an earlier backup remains, data may be restored when you reinstall the app or set up a new device. Which game data is eligible for backup or transfer in this release candidate is still under review.</p>
+    <p>The Android closed-test candidate reviewed for this draft disables Android cloud backup of app data. Some devices running Android 12 or later may still transfer app data directly to another device.</p>
+    <p>Clearing the app's storage in Android settings or uninstalling the app generally removes app data stored on that device. Copies already transferred to another device must be removed separately from that device.</p>
 
     <h2>Google advertising and consent SDKs</h2>
     <p>The Android closed-test candidate reviewed for this draft includes Google Mobile Ads Next-Gen SDK (GMA) 1.6.0 and Google User Messaging Platform (UMP) SDK 4.0.0. This candidate disables app-initiated advertising SDK initialization, ad requests and UMP consent information update requests.</p>
-    <p>The app's Android manifest contains components that can be used for startup initialization and declares permissions related to advertising identifiers. Whether the SDKs initialize automatically, access identifiers or transmit data over the network in this candidate is still under review.</p>
+    <p>This candidate's Android manifest declares permissions related to advertising identifiers. The startup configuration reviewed has no initializer registered specifically for the advertising or consent SDKs. Whether these SDKs run separately at startup, access identifiers or send data over the network is still under review.</p>
     <p>Google's disclosure for the latest GMA Next-Gen SDK describes IP addresses (which may be used to estimate approximate location), device and account-related identifiers, app and ad interactions, and diagnostics as data used for advertising, analytics and fraud prevention. For the SDK versions and configuration included in Tower Oops, the data actually collected and shared, purposes, recipients, user choices, safeguards, retention and deletion are still under review.</p>
 
     <h2>Support and privacy requests</h2>
@@ -39,11 +40,16 @@
     <h2>Visits to this policy page</h2>
     <p>This static policy page uses no analytics scripts or tracking cookies. If it is published on GitHub Pages, GitHub says it logs and stores visitors' IP addresses for security.</p>
 
-    <h2>Target audience and legal notices</h2>
-    <p>The target age groups and children's privacy policy, applicable legal bases, the roles of email, hosting and SDK providers, and any notices about outsourced processing and international transfers are still under review.</p>
+    <h2>Target audience and privacy for children and teens</h2>
+    <p>Tower Oops is intended for players aged 13 and older. In South Korea, when the law requires consent to process personal information about a player under 14, consent must be obtained from the player's legal representative and verified. Other regions may require consent from a parent or guardian under local law.</p>
+    <p>Players and their legal representatives can send privacy inquiries to the email address above. Procedures for handling children's and teens' personal information and obtaining consent are still under review.</p>
+
+    <h2>Legal bases and external providers</h2>
+    <p>The applicable legal bases for processing, the roles of email, hosting and SDK providers, and any notices about outsourced processing and international transfers are still under review.</p>
 
     <h2>Related documents</h2>
     <ul>
+      <li><a href="https://www.law.go.kr/lsLinkCommonInfo.do?chrClsCd=010202&amp;lsJoLnkSeq=1029335069">South Korea Personal Information Protection Act, Article 22-2</a></li>
       <li><a href="https://policies.google.com/privacy?hl=en">Google Privacy Policy</a></li>
       <li><a href="https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure?hl=en">Google advertising SDK data disclosure</a></li>
       <li><a href="https://developers.google.com/admob/android/next-gen/privacy?hl=en">Google UMP privacy guidance</a></li>

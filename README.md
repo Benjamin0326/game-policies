@@ -25,51 +25,20 @@ Open http://127.0.0.1:8185/ and follow the game and language links.
 
 ## Owner review before publication
 
-### Policy decisions
+The intended audience is **ages 13 and older**. Both drafts use the confirmed
+privacy and support contact `benjamin0326.dev@gmail.com`. The published Play
+listing should use that address as well. See the [T187 privacy review](tower-oops/release-privacy-review.md)
+for the manifest and SDK evidence, regional requirements, and what belongs
+in the policy and the Play Data safety form.
 
-| Owner confirmation | Proposed value or decision needed |
+| Owner decision | What needs confirmation |
 | --- | --- |
-| Privacy and support contact | Use the confirmed address `benjamin0326.dev@gmail.com` in both policies and the Play listing. |
-| Legal data controller | Confirm the legal name of the person or entity responsible for processing and any applicable contact or disclosure details. |
-| Play developer display name | `Benjamin0326 Dev` is the T185/T187 proposal. Verify the exact name displayed in Play Console. |
-| Effective date | Use the actual first public policy date, subject to Owner approval. |
-| Target age groups | Select Play age groups based on the game and intended audience. |
-| Children's privacy | Confirm how children's data is handled and which age or consent rules and Play Families requirements apply. [Google Play Families policies](https://support.google.com/googleplay/android-developer/answer/9893335) |
-| Support retention and deletion | Confirm the retention period or criteria, when the period starts, deletion timing and methods, any exceptions, and the safeguards actually used. |
-| Privacy rights | Use the confirmed email as the proposed request channel. Confirm applicable rights, how requests are verified and handled, and response timing. |
-| Providers and international transfers | Confirm the roles of email, hosting and SDK providers. Identify any recipients or outsourced processors, what data they handle and why, and, where applicable, the destination, safeguards and required transfer disclosures. |
-
-### Release evidence and Play Console
-
-- The SDK inventory in T185's `docs/release/T185-play-policy-data-safety.md`
-  identifies GMA Next-Gen 1.6.0 and UMP 4.0.0. T187 documents the SDK packaging
-  and records AndroidX Startup and advertising identifier permission
-  declarations in the manifest. The app's own SDK initialization, ad requests
-  and UMP consent information updates are disabled in the reviewed candidate.
-  Verify actual SDK initialization, identifier access and network activity in
-  the final candidate, including on cold start. Use evidence for the included
-  SDK versions and settings. Google's linked disclosure covers its latest SDK.
-  [Google SDK disclosure](https://developers.google.com/admob/android/next-gen/privacy/play-data-disclosure)
-- Check `allowBackup`, `fullBackupContent`, `dataExtractionRules` and the rules
-  they reference in the final manifest. Verify which saves or settings are
-  backed up or transferred and whether they return after reinstall or device
-  migration. Update both policies with the verified result.
-  [Android Auto Backup](https://developer.android.com/identity/data/autobackup)
-- Use the verified release behavior to align both policies and Play Data safety
-  on data access, collection, sharing, purposes, recipients, choices, security,
-  retention and deletion. Confirm the ads declaration, Advertising ID, content
-  rating and target audience in Play Console. T185 proposes reviewing **Yes**
-  for the ads declaration first because the SDK and rewarded-ad UI are present.
-  Leave that answer pending until the Owner verifies it against the candidate
-  and Play guidance.
-  [Google Play Data safety](https://support.google.com/googleplay/android-developer/answer/10787469)
-  [Play Console app content](https://support.google.com/googleplay/android-developer/answer/9859455)
-- Approve the same facts in both languages and resolve pending text. The
-  approved publication change can then remove the draft notices and `noindex`
-  tags from the Tower Oops pages. Verify that the final policy is available at a
-  public HTTPS URL without login or geographic restrictions. Use the verified
-  URL in Play Console and link to the policies in the installed app.
-  [Google Play User Data policy](https://support.google.com/googleplay/android-developer/answer/10144311)
+| Operator and public identity | Confirm the legal data controller, applicable privacy contact or officer details, and the Play developer display name. `Benjamin0326 Dev` is the proposed display name. |
+| Distribution and children's privacy | Confirm country lists for closed testing and public release. Decide how each covered processing activity will handle minors, including verified legal-representative consent where legally required and the support process for players and their representatives. Confirm the Play age groups and applicable Families requirements using the game and listings. |
+| Final release processing and Play declarations | Approve the SDK and permission configuration for submission after checking the final candidate's startup, identifier access and data flows. Confirm the separate Data safety, ads and Advertising ID declarations against those results. |
+| Support records and rights requests | Confirm actual retention criteria, when the period starts, deletion timing and methods, exceptions, safeguards, and how privacy and deletion requests are verified, handled and answered. |
+| Processors and international transfers | Confirm the legal bases, recipients and roles for email, hosting and SDK services. Identify applicable outsourcing or transfer disclosures, including the data, purposes, destinations, safeguards and retention. |
+| Publication | Approve both languages, the actual effective date, the public HTTPS host and URLs. Resolve pending statements before removing the draft notices and `noindex` tags. The published policy must be accessible without login or geographic restrictions. [Play User Data policy](https://support.google.com/googleplay/android-developer/answer/10144311) |
 
 ## GitHub Pages
 
